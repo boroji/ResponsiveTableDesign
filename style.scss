@@ -40,6 +40,8 @@ $black: 900;
 
 body {
     line-height: 1.5;
+    display: flex;
+    flex-direction: column;
 }
 
 ul,
