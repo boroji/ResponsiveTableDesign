@@ -108,22 +108,27 @@ body {
 }
 
 .wrapper {
-    width: 70%;
+    width: 100%;
     background-color: $negative;
     box-shadow: 0 0 20px 10px transparentize($dark, 0.95);
     overflow-x: scroll;
 
-    header:nth-of-type(1) {
+    header {
         display: flex;
-        border-bottom: 2px solid $border;
-        padding: 80px 80px 40px 50px;
-        position: fixed;
+        padding: 80px 80px 0 0;
         width: 100%;
+        position: absolute;
+        align-items: center;
+
+        h1 {
+            margin-left: 40px;
+        }
     }
 
     section {
         display: flex;
         justify-content: space-between;
+        margin-top: 150px;
     }
 
     
@@ -135,7 +140,6 @@ body {
     display: flex;
     flex-direction: column;
     padding-top: 90px;
-    margin-top: 250px;
 }
 
 .labels, .deferred, .annual, .immediate {
@@ -164,17 +168,14 @@ body {
     position: absolute;
     z-index: 50;
     background-color: $negative;
-    
 }
 
-@media (max-width: 1000px) {
 
-}
 
 .deferred {
-    margin-left: 450px;
+    margin-left: 350px;
 }
-
+/*
 .annual {
 
 }
@@ -182,6 +183,7 @@ body {
 .immediate {
 
 }
+*/
 
 h2, h3, h4 {
     height: 80px;
@@ -206,4 +208,40 @@ h3 {
 
 h4 {
     align-self: center;
+}
+
+@media (max-width: 950px) {
+    .wrapper {
+        width: 100%;
+
+        header {
+            line-height: 30px;
+        }
+
+        section {
+            margin-top: 250px;
+        }
+
+        .labels {
+            width: 150px;
+            height: 750px;
+            padding-left: 10px;
+            h3 {
+                line-height: 18px;
+                font-size: $sm;
+                font-weight: $regular;
+                padding-right: 5px;
+            }
+        }
+        
+        .deferred,
+        .annual,
+        .immediate {
+            height: 750px;
+        }
+
+        .deferred {
+            margin-left: 120px;
+        }
+    }
 }
