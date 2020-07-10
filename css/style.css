@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+}
+
+ul,
+li {
+  list-style: none;
+  color: #31383f;
+}
+
+a:link {
+  color: #2b4380;
+  text-decoration: none;
+  font-weight: 18px;
+  font-size: 400;
+  color: #31383f;
+}
+
+a:visited {
+  color: #7834bc;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: #0535d2;
+}
+
+h1 {
+  font-weight: 60px;
+  font-size: 900;
+  color: #31383f;
+}
+
+h2 {
+  font-weight: 36px;
+  font-size: 700;
+  color: #31383f;
+}
+
+h3 {
+  font-weight: 24px;
+  font-size: 700;
+  color: #31383f;
+}
+
+h4 {
+  font-weight: 20px;
+  font-size: 400;
+  color: #31383f;
+}
+
+h5 {
+  font-weight: 18px;
+  font-size: 300;
+  color: #31383f;
+  word-spacing: 2px;
+  letter-spacing: 2px;
+}
+
+h6 {
+  font-weight: 18px;
+  font-size: 100;
+  color: #31383f;
+  word-spacing: 2px;
+  letter-spacing: 2px;
+}
+
+p {
+  font-weight: 18px;
+  font-size: 400;
+  color: #31383f;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper {
+  width: 70%;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05);
+  overflow-x: scroll;
+}
+
+.wrapper header:nth-of-type(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 2px solid #E5E5E5;
+  padding: 80px 80px 40px 50px;
+  position: fixed;
+  width: 100%;
+}
+
+.wrapper section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.labels, .deferred, .annual, .immediate {
+  padding: 50px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 90px;
+  margin-top: 250px;
+}
+
+.labels, .deferred, .annual, .immediate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 500px;
+  width: 350px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  -webkit-box-shadow: 10px 0 15px rgba(0, 0, 0, 0.05);
+          box-shadow: 10px 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.deferred:hover, .annual:hover, .immediate:hover {
+  -webkit-box-shadow: 20px 0 20px rgba(0, 0, 0, 0.05);
+          box-shadow: 20px 0 20px rgba(0, 0, 0, 0.05);
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+}
+
+.labels h3, .deferred h4, .annual h4, .immediate h4 {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.labels {
+  position: absolute;
+  z-index: 50;
+  background-color: #fff;
+}
+
+.deferred {
+  margin-left: 450px;
+}
+
+h2, h3, h4 {
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+h2 {
+  position: absolute;
+  top: 0;
+}
+
+h4 span {
+  font-size: 36px;
+}
+
+h3 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  z-index: 50;
+}
+
+h4 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+/*# sourceMappingURL=style.css.map */

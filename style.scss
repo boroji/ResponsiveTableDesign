@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+$primary: #26374a;
+$accent: #b3cae6;
+$secondary: #2b4380;
+$hover: #0535d2;
+$text: #31383f;
+$visited: #7834bc;
+$danger: #d3080c;
+$negative: #fff;
+$dark: #000;
+$border: #E5E5E5;
+
+
+$xxl: 60px;
+$xl: 36px;
+$lg: 24px;
+$md: 20px;
+$sm: 18px;
+$xs: 14px;
+
+$thin: 100;
+$light: 300;
+$regular: 400;
+$bold: 700;
+$black: 900;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.5;
+}
+
+ul,
+li {
+    list-style: none;
+    color: $text;
+}
+
+@mixin typography($size, $weight) {
+    font-weight: $size;
+    font-size: $weight;
+    color: $text
+}
+
+a:link {
+    color: $secondary;
+    text-decoration: none;
+    @include typography($sm, $regular);
+}
+
+a:visited {
+    color: $visited;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: $hover;
+}
+
+h1 {
+    @include typography($xxl, $black);
+}
+
+h2 {
+    @include typography($xl, $bold);
+}
+
+h3 {
+    @include typography($lg, $bold);
+}
+
+h4 {
+    @include typography($md, $regular);
+}
+
+h5 {
+    @include typography($sm, $light);
+    word-spacing: 2px;
+    letter-spacing: 2px;
+}
+
+h6 {
+    @include typography($sm, $thin);
+    word-spacing: 2px;
+    letter-spacing: 2px;
+}
+
+p {
+    @include typography($sm, $regular);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    width: 70%;
+    background-color: $negative;
+    box-shadow: 0 0 20px 10px transparentize($dark, 0.95);
+    overflow-x: scroll;
+
+    header:nth-of-type(1) {
+        display: flex;
+        border-bottom: 2px solid $border;
+        padding: 80px 80px 40px 50px;
+        position: fixed;
+        width: 100%;
+    }
+
+    section {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    
+}
+
+.labels, .deferred, .annual, .immediate {
+    padding: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-top: 90px;
+    margin-top: 250px;
+}
+
+.labels, .deferred, .annual, .immediate {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 350px;
+    justify-content: space-between;
+    transition: all 0.2s ease;
+    box-shadow: 10px 0 15px transparentize($dark, 0.95);
+}
+
+.deferred:hover, .annual:hover, .immediate:hover {
+    box-shadow: 20px 0 20px transparentize($dark, 0.95);
+    transform: translateX(-10px);
+}
+
+.labels h3, .deferred h4, .annual h4, .immediate h4 {
+    align-self: flex-start;
+}
+
+
+
+
+.labels {
+    position: absolute;
+    z-index: 50;
+    background-color: $negative;
+    
+}
+
+@media (max-width: 1000px) {
+
+}
+
+.deferred {
+    margin-left: 450px;
+}
+
+.annual {
+
+}
+
+.immediate {
+
+}
+
+h2, h3, h4 {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    position: absolute;
+    top: 0;
+}
+
+h4 span {
+    font-size: $xl;
+}
+
+h3 {
+    align-self: center;
+    z-index: 50;
+}
+
+h4 {
+    align-self: center;
+}
