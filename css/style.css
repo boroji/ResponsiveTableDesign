@@ -15,13 +15,6 @@
 
 body {
   line-height: 1.5;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 ul,
@@ -45,16 +38,10 @@ a:focus {
   color: #0535d2;
 }
 
-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.titles {
+  font-size: 60px;
+  margin: 20px 0;
+  text-align: center;
 }
 
 .wrapper {
@@ -223,25 +210,38 @@ h4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 100px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .card .deferred-pension, .card .annual-pension, .card .immediate-pension {
-  margin-top: 150px;
   display: -ms-grid;
   display: grid;
   grid: 160px 80px repeat(7, 50px)/repeat(2, 220px);
   gap: 20px;
   background-color: #fff;
-  -webkit-box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05);
-          box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: -10px 0 15px rgba(0, 0, 0, 0.05);
+          box-shadow: -10px 0 15px rgba(0, 0, 0, 0.05);
   padding-bottom: 20px;
+  position: relative;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.card .deferred-pension:hover,
+.card .annual-pension:hover,
+.card .immediate-pension:hover {
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
+}
+
+@media (max-width: 920px) {
+  .card .deferred-pension, .card .annual-pension, .card .immediate-pension {
+    grid: 160px 80px repeat(7, 50px)/repeat(2, 180px);
+  }
 }
 
 h5, p {
@@ -357,11 +357,5 @@ h5:nth-of-type(8), p:nth-of-type(8) {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: 9 / 1 / span 1 / span 2;
-}
-
-.heading {
-  position: absolute;
-  top: 100px;
-  left: 100px;
 }
 /*# sourceMappingURL=style.css.map */
